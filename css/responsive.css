@@ -181,5 +181,8 @@
         width: 220px;
         height: 220px;
     }
+    .memory5{
+        object-position: top;
+    }
 
 }
