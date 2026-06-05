@@ -502,7 +502,7 @@
                 data-aos="zoom-in">
 
                 <img src="assets/images/memory5.png"
-                    alt="memory">
+                    alt="memory" class="memory5">
 
                 <div class="gallery-overlay">
 
@@ -1202,6 +1202,32 @@
 </section>
 
 
+<div id="anniversaryPopup" class="popup-overlay">
+    <div class="popup-box">
+        <h2>❤️ Happy <span id="anniversaryCount"></span> Anniversary, Rani 👑❤️</h2>
+
+        <p>
+            Two years ago, our journey began, and since then, every day has become more beautiful because of you.
+            <br><br>
+
+            Thank you for the laughter, the memories, the support, and all the little moments that mean so much.
+            Looking back at everything we have shared fills my heart with gratitude and reminds me how lucky I am to have you in my life.
+            <br><br>
+
+            No matter where life takes us, you'll always be my favorite chapter.
+            <br><br>
+
+            Happy Anniversary My Love! 💕✨
+            <br><br>
+
+            <strong>Forever Yours,<br>Rohit ❤️</strong>
+        </p>
+
+        <button onclick="closePopup()">💕 Explore Our Memories</button>
+    </div>
+</div>
+
+
 
 
 
@@ -1304,6 +1330,39 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const startYear = 2024; // Relationship started on 6 June 2024
+
+    const today = new Date();
+    const currentDay = today.getDate();
+    const currentMonth = today.getMonth() + 1; // June = 6
+    const currentYear = today.getFullYear();
+
+    if (currentDay === 5 && currentMonth === 6) {
+
+        const anniversaryCount = currentYear - startYear;
+
+        document.getElementById("anniversaryCount").innerText =
+            anniversaryCount + getOrdinal(anniversaryCount);
+
+        document.getElementById("anniversaryPopup").style.display = "flex";
+    }
+
+});
+
+function closePopup() {
+    document.getElementById("anniversaryPopup").style.display = "none";
+}
+
+function getOrdinal(num) {
+    const suffixes = ["th", "st", "nd", "rd"];
+    const v = num % 100;
+    return suffixes[(v - 20) % 10] || suffixes[v] || suffixes[0];
+}
+</script>
 </body>
 
 </html>
