@@ -2113,3 +2113,45 @@ body {
     bottom: 15%;
     left: 25%;
 }
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.popup-box {
+    width: 90%;
+    max-width: 550px;
+    background: #fff5f7;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    animation: popupFade 0.5s ease;
+}
+
+.popup-box h2 {
+    color: #ff4d88;
+    margin-bottom: 20px;
+}
+
+.popup-box p {
+    line-height: 1.8;
+    color: #444;
+}
+
+.popup-box button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #ff4d88;
+    color: white;
+    font-size: 16px;
+}
